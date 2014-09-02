@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+
+group="com.xebialabs.thirdparty"
+version="v5.1"
+
+sourceSets.main.java.srcDirs = ["src"]
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile "dom4j:dom4j:1.6.1"
+  compile "javax.mail:mail:1.4.7"
+  compile "javax.servlet:servlet-api:2.5"
+  compile "org.sblim.wbem:sblim-cim-client:1.3.9"
+}
