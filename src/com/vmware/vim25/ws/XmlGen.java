@@ -32,6 +32,7 @@ package com.vmware.vim25.ws;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -760,7 +761,9 @@ public final class XmlGen
 	      Object value  = null;
 	      try
 	      {
-	        value = f.get(obj);
+            if (!Modifier.isPrivate(f.getModifiers())) {
+                value = f.get(obj);
+            }
 	      } catch (IllegalAccessException iae)
 	      {
 	        iae.printStackTrace();

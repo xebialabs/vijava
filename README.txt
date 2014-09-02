@@ -41,5 +41,3 @@ Blog: http://www.doublecloud.org
 
 COPYRIGHT & LICENSE:
 BSD. See the License.txt file for details
-
-# mvn install:install-file -Dfile=sblimCIMClient.jar -DgroupId=org.sblim.wbem -DartifactId=sblim-cim-client -Dversion=1.3.9.3 -Dpackaging=jar
